@@ -36,6 +36,9 @@ header {
   width: 100vw;
   background-color: rgb(74, 74, 74);
 }
+.grey-container a {
+  text-decoration: none;
+}
 
 .container {
   width: 100%;
@@ -73,8 +76,13 @@ section {
   justify-content: space-evenly;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card {
-  gap: 2rem;
   background-color: white;
   border-radius: 10px;
   margin: 50px 0;
@@ -93,13 +101,12 @@ section {
   cursor: pointer;
 }
 .card .card-text {
-  background-color: white;
   font-size: 16px;
   font-weight: 600;
   line-height: 21px;
-  padding: 20px;
+  padding: 0 20px;
   border-radius: 10px;
-  max-height: 100px;
+  height: 105px;
   overflow: hidden;
 }
 .card .card-text:hover {
@@ -131,15 +138,11 @@ section {
 .bureau {
   height: 600px;
 }
-
-.flex-container {
+.bureau .flex-container {
   margin-top: 4%;
   display: flex;
 }
-.flex-container .aside-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.bureau .flex-container .aside-text {
   padding: 0 20px;
   text-transform: uppercase;
   text-align: center;
@@ -148,11 +151,10 @@ section {
   line-height: 32px;
   font-weight: 800;
 }
-.flex-container .aside-text .text {
+.bureau .flex-container .aside-text .text {
   padding: 50px 20px 20px 20px;
 }
-
-.contact-btn {
+.bureau .flex-container .aside-text .contact-btn {
   height: 80px;
   border-radius: 10px;
   color: white;
@@ -163,7 +165,7 @@ section {
   background-image: linear-gradient(180deg, #5ac47e 0%, #41988d 100%);
   cursor: pointer;
 }
-.contact-btn:hover {
+.bureau .flex-container .aside-text .contact-btn:hover {
   background-image: linear-gradient(180deg, #41988d 0%, #5ac47e 100%);
 }
 
