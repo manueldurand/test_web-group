@@ -85,6 +85,7 @@ section {
     transition: all 0.25s ease;
     &:hover{
         transform: scale(1.1);
+        cursor: pointer;
     }
   }
   .card-text {
@@ -96,6 +97,10 @@ section {
     border-radius: 10px;
     max-height: 100px;
     overflow: hidden;
+    &:hover{
+        color: $font-color;
+        cursor: pointer;
+    }
   }
   .card-footer {
     display: flex;
@@ -109,18 +114,19 @@ section {
 
 .arrow-left,
 .arrow-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  &:hover svg path{
-    fill: white;
+    height: 50px;
+    &:hover{
+        cursor: pointer;
+        svg path{
+            fill: white;
+          }
+        }
+    }
 
-  }
-}
 
 
 
-// section 2
+// section 2 (bureau)
 
 .bureau {
   height: 600px;
@@ -133,7 +139,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // margin: 20px;
     padding: 0 20px;
     text-transform: uppercase;
     text-align: center;
@@ -142,7 +147,8 @@ section {
     line-height: 32px;
     font-weight: 800;
     .text{
-        padding: 20px;
+        padding: 50px 20px 20px 20px;
+
     }
   }
 }
@@ -159,14 +165,8 @@ section {
   
   cursor: pointer;
   &:hover{
-    background-image:linear-gradient(180deg, #5ac47e 50%, #41988d 50%);
-    background-repeat:no-repeat;
-    background-size: 200% 100%; 
-    transition:background-size 1s, background-color 1s; 
-    // background-image: linear-gradient(180deg,  #41988d 0%, #5ac47e 100%);
+
+    background-image: linear-gradient(180deg,  #41988d 0%, #5ac47e 100%);
      
   }
 }
-// .arrow:hover{
-//     fill: white;
-// }
