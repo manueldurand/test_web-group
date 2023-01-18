@@ -70,7 +70,7 @@ section {
 }
 
 .carrousel {
-  width: 1280px;
+  width: 100%;
   display: flex;
   margin: auto;
   justify-content: space-evenly;
@@ -109,7 +109,7 @@ section {
   height: 105px;
   overflow: hidden;
 }
-.card .card-text:hover {
+.card:hover {
   color: rgb(90, 195, 126);
   cursor: pointer;
 }
@@ -120,6 +120,14 @@ section {
 }
 .card .card-footer .clock {
   margin-right: 1em;
+}
+
+.arrow-cont {
+  height: 450px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .arrow-left,
@@ -167,6 +175,54 @@ section {
 }
 .bureau .flex-container .aside-text .contact-btn:hover {
   background-image: linear-gradient(180deg, #41988d 0%, #5ac47e 100%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  section {
+    width: calc(100vw - 10%);
+  }
+  section .texte-entete {
+    width: calc(100vw - 40%);
+  }
+  section .carrousel {
+    flex-wrap: wrap;
+  }
+  section .carrousel .card3 {
+    display: none;
+  }
+  section .flex-container {
+    flex-direction: column-reverse;
+  }
+  section .flex-container .photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+  }
+  section .flex-container .photo img {
+    width: 600px;
+  }
+  section .flex-container .aside-text {
+    justify-content: center;
+    align-items: center;
+  }
+  section .flex-container .aside-text .text {
+    width: 600px;
+  }
+  section .flex-container .contact-btn {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  section {
+    width: calc(100vw - 10%);
+  }
+  section .carrousel {
+    flex-wrap: wrap;
+  }
+  section .flex-container {
+    flex-wrap: wrap-reverse;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

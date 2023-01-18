@@ -66,7 +66,7 @@ section {
   padding-top: 20px;
 }
 .carrousel {
-  width: 1280px;
+  width: 100%;
   display: flex;
   margin: auto;
   justify-content: space-evenly;
@@ -104,11 +104,12 @@ section {
     border-radius: 10px;
     height: 105px;
     overflow: hidden;
-    &:hover {
-      color: $font-color;
-      cursor: pointer;
-    }
   }
+  &:hover {
+    color: $font-color;
+    cursor: pointer;
+  }
+
   .card-footer {
     display: flex;
     color: $light-grey;
@@ -118,7 +119,13 @@ section {
     }
   }
 }
-
+.arrow-cont {
+  height: 450px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .arrow-left,
 .arrow-right {
   height: 50px;
@@ -165,6 +172,61 @@ section {
           background-image: linear-gradient(180deg, #41988d 0%, #5ac47e 100%);
         }
       }
+    }
+  }
+}
+// media queries pour tablettes
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  section {
+    width: calc(100vw - 10%);
+    .texte-entete {
+      width: calc(100vw - 40%);
+    }
+    .carrousel {
+      flex-wrap: wrap;
+      .card3 {
+        display: none;
+      }
+    }
+
+    .flex-container {
+      flex-direction: column-reverse;
+      .photo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10%;
+        img{
+          width: 600px;
+        }
+
+      }
+      .aside-text{
+        // width: 600px;
+        // flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .text{
+            width: 600px;
+        }
+      }
+      .contact-btn {
+        width: 300px;
+        margin-bottom: 20px;
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  section {
+    width: calc(100vw - 10%);
+    .carrousel {
+      flex-wrap: wrap;
+    }
+    .flex-container {
+      flex-wrap: wrap-reverse;
     }
   }
 }
