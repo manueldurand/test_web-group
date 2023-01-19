@@ -4,6 +4,7 @@ $font-color: rgba(90, 195, 126, 1);
 $grey: rgba(74, 74, 74, 1);
 $light-grey: rgba(173, 173, 173, 1);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+@import 'capitales_24_32';
 * {
   margin: 0;
   padding: 0;
@@ -68,7 +69,6 @@ section {
 .carrousel {
   width: 100%;
   display: flex;
-  margin: auto;
   justify-content: space-evenly;
 
 }
@@ -102,7 +102,6 @@ section {
     }
   }
   .card-text {
-    font-size: 16px;
     font-weight: 600;
     line-height: 21px;
     padding: 0 20px;
@@ -155,11 +154,10 @@ section {
 
     .aside-text {
       padding: 0 20px;
-      text-transform: uppercase;
+      @include texte-capitales;
       text-align: center;
       color: $font-color;
-      font-size: 24px;
-      line-height: 32px;
+      
       font-weight: 800;
       .text {
         padding: 50px 20px 20px 20px;
@@ -168,10 +166,8 @@ section {
         height: 80px;
         border-radius: 10px;
         color: white;
-        font-size: 24px;
+        @include texte-capitales;
         font-weight: 700;
-        text-transform: uppercase;
-        line-height: 32px;
         background-image: linear-gradient(180deg, #5ac47e 0%, #41988d 100%);
 
         cursor: pointer;
@@ -182,6 +178,8 @@ section {
     }
   }
 }
+
+
 // media queries pour tablettes
 
 @media screen and (min-width: 921px) and (max-width: 1280px) {
@@ -209,8 +207,6 @@ section {
 
       }
       .aside-text{
-        // width: 600px;
-        // flex-direction: row;
         justify-content: center;
         align-items: center;
         .text{
@@ -225,9 +221,10 @@ section {
     }
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 920px) {
     section {
-      width: calc(100vw);
+      width: 100vw;
       .texte-entete {
         width: calc(100vw - 20%);
       }
@@ -259,8 +256,6 @@ section {
   
         }
         .aside-text{
-          // width: 600px;
-          // flex-direction: row;
           justify-content: center;
           align-items: center;
           .text{
@@ -276,7 +271,7 @@ section {
     }
   }
 
-
+// media queries smartphones
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     section {
@@ -297,6 +292,7 @@ section {
             display: flex;
             justify-content: space-evenly;
             padding-bottom: 10%;
+            margin: 0 2%;
           }
     
         .flex-container {
