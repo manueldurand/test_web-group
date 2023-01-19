@@ -76,6 +76,10 @@ section {
   justify-content: space-evenly;
 }
 
+.arrow-block {
+  display: none;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -131,15 +135,21 @@ section {
 }
 
 .arrow-left,
-.arrow-right {
+.arrow-right,
+.arrow-left-responsive,
+.arrow-right-responsive {
   height: 50px;
 }
 .arrow-left:hover,
-.arrow-right:hover {
+.arrow-right:hover,
+.arrow-left-responsive:hover,
+.arrow-right-responsive:hover {
   cursor: pointer;
 }
 .arrow-left:hover svg path,
-.arrow-right:hover svg path {
+.arrow-right:hover svg path,
+.arrow-left-responsive:hover svg path,
+.arrow-right-responsive:hover svg path {
   fill: white;
 }
 
@@ -177,7 +187,7 @@ section {
   background-image: linear-gradient(180deg, #41988d 0%, #5ac47e 100%);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 921px) and (max-width: 1280px) {
   section {
     width: calc(100vw - 10%);
   }
@@ -213,15 +223,92 @@ section {
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 920px) {
+  section {
+    width: 100vw;
+  }
+  section .texte-entete {
+    width: calc(100vw - 20%);
+  }
+  section .carrousel {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  section .carrousel .card3 {
+    display: none;
+  }
+  section .arrow-left, section .arrow-right {
+    display: none;
+  }
+  section .arrow-block {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+  }
+  section .flex-container {
+    flex-direction: column-reverse;
+  }
+  section .flex-container .photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+  }
+  section .flex-container .photo img {
+    width: 600px;
+  }
+  section .flex-container .aside-text {
+    justify-content: center;
+    align-items: center;
+  }
+  section .flex-container .aside-text .text {
+    width: 600px;
+  }
+  section .flex-container .contact-btn {
+    width: 300px;
+    margin-bottom: 35px;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   section {
     width: calc(100vw - 10%);
   }
+  section .texte-entete {
+    width: calc(100vw - 20.5%);
+  }
   section .carrousel {
     flex-wrap: wrap;
   }
+  section .carrousel .card2, section .carrousel .card3 {
+    display: none;
+  }
+  section .arrow-left, section .arrow-right {
+    display: none;
+  }
+  section .arrow-block {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+  }
   section .flex-container {
-    flex-wrap: wrap-reverse;
+    flex-direction: column-reverse;
+  }
+  section .flex-container .photo {
+    display: flex;
+    justify-content: center;
+  }
+  section .flex-container .photo img {
+    width: 320px;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 25%;
+  }
+  section .flex-container .aside-text {
+    justify-content: center;
+    align-items: center;
+  }
+  section .flex-container .contact-btn {
+    width: 300px;
+    margin: 12% 0;
   }
 }
 

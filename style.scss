@@ -70,7 +70,12 @@ section {
   display: flex;
   margin: auto;
   justify-content: space-evenly;
+
 }
+.arrow-block{
+    display: none;
+
+  }
 
 // card
 .flex-col {
@@ -127,7 +132,9 @@ section {
   justify-content: center;
 }
 .arrow-left,
-.arrow-right {
+.arrow-right,
+.arrow-left-responsive,
+.arrow-right-responsive {
   height: 50px;
   &:hover {
     cursor: pointer;
@@ -177,7 +184,7 @@ section {
 }
 // media queries pour tablettes
 
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 921px) and (max-width: 1280px) {
   section {
     width: calc(100vw - 10%);
     .texte-entete {
@@ -218,15 +225,105 @@ section {
     }
   }
 }
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  section {
-    width: calc(100vw - 10%);
-    .carrousel {
-      flex-wrap: wrap;
-    }
-    .flex-container {
-      flex-wrap: wrap-reverse;
+@media screen and (min-width: 768px) and (max-width: 920px) {
+    section {
+      width: calc(100vw);
+      .texte-entete {
+        width: calc(100vw - 20%);
+      }
+      .carrousel {
+        width: 100%;
+        flex-wrap: wrap;
+        .card3 {
+          display: none;
+        }
+      }
+      .arrow-left, .arrow-right{
+        display: none;
+      }
+          .arrow-block{
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 10%;
+      }
+  
+      .flex-container {
+        flex-direction: column-reverse;
+        .photo {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 10%;
+          img{
+            width: 600px;
+          }
+  
+        }
+        .aside-text{
+          // width: 600px;
+          // flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          .text{
+              width: 600px;
+          }
+        }
+        .contact-btn {
+          width: 300px;
+          margin-bottom: 35px;
+  
+        }
+      }
     }
   }
-}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    section {
+        width: calc(100vw - 10%);
+        .texte-entete {
+          width: calc(100vw - 20.5%);
+        }
+        .carrousel {
+          flex-wrap: wrap;
+          .card2, .card3 {
+            display: none;
+          }
+        }
+        .arrow-left, .arrow-right{
+            display: none;
+          }
+              .arrow-block{
+            display: flex;
+            justify-content: space-evenly;
+            padding-bottom: 10%;
+          }
+    
+        .flex-container {
+          flex-direction: column-reverse;
+          .photo {
+            display: flex;
+            justify-content: center;
+            
+            img{
+              width: 320px;
+              height: 250px;
+              border-radius: 10px;
+              margin-bottom: 25%;
+            }
+    
+          }
+          .aside-text{
+            justify-content: center;
+            align-items: center;
+          }
+          .contact-btn {
+            width: 300px;
+            margin: 12% 0;
+    
+          }
+        }
+      }
+    }
+
+
